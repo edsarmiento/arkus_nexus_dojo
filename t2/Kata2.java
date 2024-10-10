@@ -1,8 +1,6 @@
-//https://www.codewars.com/kata/51b6249c4612257ac0000005
-package t2;
+// https://www.codewars.com/kata/51b6249c4612257ac0000005
 
 class Kata2 {
-
 	private static final int[] values = new int[128];
 
 	static {
@@ -21,8 +19,15 @@ class Kata2 {
 
 		for (int i = s.length() - 1; i >= 0; i--) {
 			char currentChar = s.charAt(i);
+			// Check if the character is a valid Roman numeral
+			if (currentChar != 'I' && currentChar != 'V' && currentChar != 'X' && 
+			    currentChar != 'L' && currentChar != 'C' && currentChar != 'D' && currentChar != 'M') {
+				throw new IllegalArgumentException("Invalid Roman numeral character: " + currentChar);
+			}
+
 			int currentValue = values[currentChar];
 
+			// Subtraction if the current value is less than the previous one, otherwise addition
 			if (currentValue < prevValue) {
 				total -= currentValue;
 			} else {
