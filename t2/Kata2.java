@@ -34,10 +34,12 @@ class Kata2 {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(romanToInt("MCMXC")); // 1990
-		System.out.println(romanToInt("MMVIII")); // 2008
+		System.out.println(romanToInt("MM")); //2000
 		System.out.println(romanToInt("MDCLXVI")); // 1666
-		System.out.println(romanToInt("IX")); // 9
-		System.out.println(romanToInt("IV")); // 4
+		System.out.println(romanToInt("M")); // 1000
+		System.out.println(romanToInt("CD")); //400
+		System.out.println(romanToInt("XC")); //90
+		System.out.println(romanToInt("XL")); //40
+		System.out.println(romanToInt("I")); //1
 	}
 }
