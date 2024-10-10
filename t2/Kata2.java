@@ -4,7 +4,7 @@ class Kata2 {
 
 	private static final int[] values = new int[128];
 
-  static {
+	static {
 		values['I'] = 1;
 		values['V'] = 5;
 		values['X'] = 10;
@@ -12,7 +12,7 @@ class Kata2 {
 		values['C'] = 100;
 		values['D'] = 500;
 		values['M'] = 1000;
-  }
+	}
 
 	public static int romanToInt(String s) {
 		int total = 0;
@@ -23,9 +23,9 @@ class Kata2 {
 			int currentValue = values[currentChar];
 
 			if (currentValue < prevValue) {
-					total -= currentValue;
+				total -= currentValue;
 			} else {
-					total += currentValue;
+				total += currentValue;
 			}
 			prevValue = currentValue;
 		}
@@ -33,11 +33,11 @@ class Kata2 {
 		return total;
 	}
 
-	public static void main(String[] args){
-		System.out.println(romanToInt("MCMXC"));   // 1990
-		System.out.println(romanToInt("MMVIII"));  // 2008
+	public static void main(String[] args) {
+		System.out.println(romanToInt("MCMXC")); // 1990
+		System.out.println(romanToInt("MMVIII")); // 2008
 		System.out.println(romanToInt("MDCLXVI")); // 1666
-		System.out.println(romanToInt("IX"));      // 9
-		System.out.println(romanToInt("IV"));      // 4
+		System.out.println(romanToInt("IX")); // 9
+		System.out.println(romanToInt("IV")); // 4
 	}
 }
